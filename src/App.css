@@ -6,7 +6,7 @@
 }
 
 .customer-list-container {
-  width: 40%;
+  min-width: 520px;
   overflow-y: auto;
   border-right: 1px solid #ccc;
 }
@@ -15,9 +15,7 @@
   overflow-y: 'scroll';
   height: '100vh'
 }
-.customer-details-container {
-  overflow-y: auto;
-}
+
 
 .customer-list-container, .customer-details-container {
   scrollbar-width: thin;
@@ -51,4 +49,10 @@
 }
 .customer-details-image{
   width: 100%;
+}
+
+.customer-details {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
 }
