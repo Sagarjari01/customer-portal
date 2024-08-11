@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.customer-list-container {
+  width: 40%;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.customer-list-main{
+  overflow-y: 'scroll';
+  height: '100vh'
+}
+.customer-details-container {
+  overflow-y: auto;
+}
+
+.customer-list-container, .customer-details-container {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.customer-list-container::-webkit-scrollbar, .customer-details-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.customer-list-container::-webkit-scrollbar-thumb, .customer-details-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.customer-list-container::-webkit-scrollbar-track, .customer-details-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.selected{
+  border: 2px solid blue;
+  background-color: #D1E9F6;
+}
+
+.customer-card-main{
+  border:1px solid gray;
+}
+.customer-details-main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px
+}
+.customer-details-image{
+  width: 100%;
 }
