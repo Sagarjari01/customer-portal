@@ -31,10 +31,7 @@ export const PhotoProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const fetchRandomPhotos = useCallback(async () => {
     setIsLoading(true);
-    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-
     try {
-      await delay(2000)
       const randomPage = getRandomPageNumber();
       const response = await axios.get(`https://jsonplaceholder.typicode.com/photos?_page=${randomPage}&_limit=9`);
       const photoUrls = response.data.map((photo: any) => photo.url);
